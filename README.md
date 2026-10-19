@@ -60,6 +60,13 @@ The package installs the compiled Rust binary as `/usr/bin/skeleton`, its
 README under `/usr/share/doc/skeleton/`, and the license under
 `/usr/share/licenses/skeleton/`.
 
+## Desktop package model
+
+`argvus` is the master package of the ARGVUS desktop. A component package depends on
+`argvus`, so installing it pulls in the desktop and no install order is required.
+Runtime tools that belong to the desktop are subcommands of `argvus` (for example
+`argvus config` and `argvus i18n`), not separate executables.
+
 ## Documentation
 
 - [DEVELOPMENT.md](DEVELOPMENT.md) — build, checksums, signing, releases
